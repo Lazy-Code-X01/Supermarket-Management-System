@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+        <!--nav section-->
+        <nav>
+            <div class="h-text">LazyCode admin dashboard</div>
+            <div class="u-text">
+                <div class="img-holder"></div>
+                <div class="text-ref">Rhea Debby</div>
+            </div>
+        </nav>
+        
+        <!--cards section-->
+        <div class="mrty-">
+
+            <div class="inner-container">
+                <div class="row">
+                    <div class="cards-container">
+                        <!--card 1-->
+                        <div class="card">
+                            <img src="./images/sales.png" alt="image loading...">
+                            <div class="price">$234,000.00</div>
+                            <div class="price-desc">Total Sales</div>
+                        </div>
+
+                        <!--card 2-->
+                        <div class="card">
+                            <img id="total-cost-img" src="./images/calculator.png" alt="image loading">
+                            <div class="price">$2434,000.00</div>
+                            <div class="price-desc">Total Costs</div>
+                        </div>
+
+
+                        <!--card 3-->
+                        <div class="card">
+                            <img id="total-product-img" src="./images/remain.png" alt="">
+                            <div class="price">113,90 <small>remaining</small> </div>
+                            <div class="price-desc">Total Products</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--admin tools-->
+                <p class="alert"></p>
+
+                <div class="h-text">admin tools</div>
+                <div class="admin-tools-container">
+                    <div class="tools-pannel-section">
+                        <div class="products-section">
+                            <form class="panel-t0-add-available-product">
+                                <div class="sub-panel-t0-add-available-product">
+                                    <input class="prod-name-input" autofocus style="text-transform: capitalize;" type="text" placeholder="Name">
+                                    <input class="prod-price-input" type="number" placeholder="Price">
+                                </div>
+                                <button>Add Product</button>
+                            </form>
+
+                            <div class="available-product-panel">
+                                <div class="p-t ext">Available Products</div>
+
+                                <div class="table">
+
+                                    <div class="row">
+                                        <span>#</span>
+                                        <span>NAME</span>
+                                        <span>PRICE</span>
+                                        <span>OPTIONS</span>
+                                    </div>
+
+                                    <div class="row-prod-container">
+                                        <!-- <div class="row-prod">
+                                            <div class="content" id="sn">
+                                                <input type="text" class="text" value="1" />
+                                            </div>
+        
+                                            <div class="content" id="name">
+                                                <input type="text" class="text" value="Butter" />
+                                            </div>
+        
+                                            <div class="content" id="price">
+                                                <input type="text" class="text" value="1200" />
+                                            </div>
+                                            
+                                            <div class="btn-container">
+                                                <button>EDIT</button>
+                                                <button>DELETE</button>
+                                            </div> 
+                                        </div>-->
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="categories-section">
+                        <div class="p-text">product categories</div>
+                        <div class="product-categoreis-pannel">
+
+                                <form class="header-for-product-categories-panel">
+                                    <input class="input" type="text" placeholder="Add To Your Categories">
+                                    <button><span class="material-symbols-outlined">add</span></button>
+                                </form>
+
+                                <div class="body-for-product-categries-apnel">
+                                    <!-- <div class="row">
+                                        <input class="category-input" type="text" value="Lazy-Code" readonly>
+                                        <div class="btn-holder"> <button class="edit-btn">E</button> <button>D</button> </div>
+                                    </div> -->
+                                </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <!--PREVIOUS SALES RECORD-->
+                    <div class="h-text">record tracking</div>
+                    <div class="previous-recrod-panel">
+
+                        <div class="covered-sale-box" onclick="prevBox(this)">
+                            <h1 id="select">covered sale</h1>
+                            <p class="date">september 5 2023</p>
+                        </div>
+
+                        <div class="covered-sale-box" onclick="prevBox(this)">
+                            <h1 id="select">covered sale</h1>
+                            <p class="date">september 6 2023</p>
+                        </div>
+
+                        <div class="covered-sale-box" onclick="prevBox(this)">
+                            <h1 id="select">covered sale</h1>
+                            <p class="date">september 7 2023</p>
+                        </div>
+
+                        <div class="covered-sale-box" onclick="prevBox(this)">
+                            <h1>covered sale</h1>
+                            <p class="date">september 8 2023</p>
+                        </div>
+
+                        <div class="covered-sale-box" onclick="prevBox(this)">
+                            <h1>covered sale</h1>
+                            <p class="date">september 9 2023</p>
+                        </div>
+
+                        <div class="covered-sale-box" onclick="prevBox(this)">
+                            <h1>covered sale</h1>
+                            <p class="date">september 10 2023</p>
+                        </div>                    
+    <!--                     
+                        <div class="covered-sale-box">
+                            <h1>covered sale</h1>
+                            <p class="date">september 5 2021</p>
+                        </div>
+
+                        <div class="covered-sale-box">
+                            <h1>covered sale</h1>
+                            <p class="date">september 5 2021</p>
+                        </div>
+
+                        <div class="covered-sale-box">
+                            <h1>covered sale</h1>
+                            <p class="date">september 5 2021</p>
+                        </div> -->
+
+
+                        <div class="overlay-for-centered-div">
+                            <div class="modal">
+                                <div class="header-section">
+                                    <h1>covered sales</h1>
+                                    <div class="times">X</div>
+                                    <div class="date-on-modal">Sepetember 15, 2022</div>
+                                </div>
+                                <div class="body-section">
+                                    <div class="box">
+                                        <h2>Total Sales</h2>
+                                        <p>$23,000</p>
+                                    </div>
+                                    <div class="box">
+                                        <h2>Total Products</h2>
+                                        <p>40 products</p>
+                                    </div>
+                                    <div class="box">
+                                        <h2>Total Edits</h1>
+                                        <p>23</p>
+                                    </div>
+                                    <div class="box">
+                                        <h2>Total Deletes</h2>
+                                        <p>40</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- footer -->
+                    <div class="footer">
+                        we moving into the tech world and lazycode is gonna be moving with it by building life helping applications
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vanilla/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+@import './font';
+@import './color';
+@import './utilities';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.max-container{
+    width: 100%;
+    height: 100vh;
+    @include flexCenter();
+    // background-color: green;
+    max-width: 100%;
+
+    .container{
+        width: 80%;
+        height: 90vh;
+        display: flex;
+
+        .right-section{
+            height: 100%;
+            width: 45%;
+            background: url(../images/right-form-bg.jpg);
+            background-position: 30%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .left-section{
+            height: 100%;
+            width: 55%;
+            background: url(../images/blue-line.jpg);
+            background-repeat: no-repeat;
+            background-position: 20px;
+            padding: 1em;
+            background-size: contain;
+            background-color: white;
+            border-top: double;
+            border-bottom: double;
+            border-right: double;
+            position: relative;
+
+            .header{
+                font-size: 5em;
+                text-align: center;
+                font-family: ageOfUtron;
+                font-weight: normal;
+                letter-spacing: .1em;
+                margin-bottom: .3em;
+                user-select: none;
+            }
+
+            .cart-image-holder{
+                width: 20%;
+                height: 15vh;
+                background: url(../images/cart.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-left: 50%;
+                margin-bottom: 3em;
+            }
+
+            form{
+                width: 100%;
+                @include flexCenter;
+                flex-direction: column;
+
+                ::placeholder{
+                    color: rgb(192, 191, 191);
+                }
+                .inputs-holder{
+                    width: 80%;
+                    // background-color: green;
+                    margin-bottom: 3em;
+                    display: flex;
+                    justify-content: space-between;
+
+                    label{
+                        font-size: 2rem;
+                        margin-top: .3em;
+                        font-family: secoandaryFont;
+                        text-transform: capitalize;
+                        user-select: none;
+                    }
+
+                    select{
+                        font-size: 1.5rem;
+                        width: 55%;
+                        outline: none;
+                        padding: .2em;
+                        // border: none;
+                        option{
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                input{
+                    width: 55%;
+                    outline: none;
+                    appearance: none;
+                    border: 1.5px solid;
+                    height: 2rem;
+                    font-size: 1.5rem;
+                    padding: 1em .2em;
+                    text-transform: capitalize;
+
+                    &:focus{
+                        border-radius: 5px;
+                        border: 1.5px solid $primary-color;
+                    }
+                }
+
+                .button-hoder{
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-around;
+
+                    .button{
+                        opacity: 70%;
+                        border: none;
+                        width: 136px;
+                        height: 55.3px;
+                        text-transform: capitalize;
+                        font-size: 1.5rem;
+                        background: $gardient-color;
+                        box-shadow: $shadow;
+                        // font-family: $primaryFont;
+                        border-radius: 5px;
+                        color: white;
+                        cursor: no-drop;
+                        transition: 0.3s ease; 
+                        user-select: none;
+                        // &:hover{
+                        //     transform:scale(105%);
+                        // }
+
+                        // &:focus{
+                        //     transform: scale(98%);
+                        // }
+                    }
+
+                    .activeBtn{
+                        opacity: 100%;
+                        cursor: pointer;
+
+                        &:hover{
+                            transform:scale(105%);
+                        }
+
+                        &:focus{
+                            transform: scale(98%);
+                        }
+                    }
+                }
+
+                .show{
+                    display: none;
+                    position: absolute;
+                    bottom: 23%;
+                    right: 90px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-family: primaryFont;
+                    user-select: none;
+                    // color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*----------------------------------alert styling area ---------------------*/
+.alert {
+    // margin-bottom: 1rem;
+    width: 70%;
+    @include marginCenter; 
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    letter-spacing: 0.25rem;
+    text-transform: capitalize;
+
+}
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+.alert-success {
+    color: #155724;
+    background: #d4edda;
+}

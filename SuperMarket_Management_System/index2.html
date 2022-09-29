@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="shortcut icon" href="./images/cart.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="max-container">
+        <div class="container">
+            <div class="right-section"></div>
+            <div class="left-section">
+                <!-- ALERT -->
+                <p class="alert"></p>
+                <h1 class="header">login</h1>
+                <box-icon name='show-alt'></box-icon>
+                <div class="cart-image-holder"></div>
+                <form>
+                    <!--select role-->
+                    <div class="inputs-holder">
+                        <label>select role</label>
+                        <select name="" id="">
+                            <option value="Admin">Admin</option>
+                            <option value="Seller">Seller</option>
+                        </select>
+                    </div>
+                    <!-- user id -->
+                    <div class="inputs-holder">
+                        <label>user id</label>
+                        
+                        <input onkeyup="user_id()"  type="text" class="user-id">
+                    </div>
+                    <!-- password -->
+                    <div class="inputs-holder">
+                        <label>password</label>
+                        <input disabled onkeyup="pass()" type="password" class="password">
+                    </div>
+
+                    <div class="show">SHOW</div>
+
+                    <div class="button-hoder">
+                        <button disabled type="submit" class="button" id="loginBtn">login</button>
+                        <button type="submit" class="button" id="clearBtn">clear</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./vanilla/vanilla_2.js"></script>
+</body>
+</html>

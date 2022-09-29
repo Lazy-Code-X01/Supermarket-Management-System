@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./images/cart.jpg" type="image/x-icon">
+</head>
+<body>
+
+<section class="bodyHolder">
+        <div class="container">
+            <div class="min-container">
+                <p class="seller">seller</p>
+                <p class="categories">categories</p>
+                <div class="search-container">
+                    <input id="myInput" onkeyup="searchFunction()" type="search" placeholder="search by product category...">
+
+                    <ul id="myUL">
+                    <!--   <li><a href="#">Adele</a></li>
+                        <li><a href="#">Adele</a></li>
+                        <li><a href="#">corn date</a></li>
+                        <li><a href="#">corn Flaes</a></li>
+                        <li><a href="#">Agnes</a></li>
+                    
+                        <li><a href="#">Billy</a></li>
+                        <li><a href="#">Bob</a></li>
+                    
+                        <li><a href="#">Calvin</a></li>
+                        <li><a href="#">Christina</a></li>
+                        <li><a href="#">Cindy</a></li> -->
+                    </ul>
+                </div>
+
+            <P id="myBtn" class="logoutBtn">logout</P>
+            </div>
+
+            <div class="max-container">
+                <h1>MANAGE PRODUCTS</h1>
+                <p class="alert"></p>
+                <div class="parent-div-for-form">
+                    <div class="right-form">
+                        <!--form number 1-->
+                        <div class="form-holder">
+                            <label style="user-select: none;" for="PRODID">S / N</label>
+                            <input style="user-select: none;" class="sn" type="text" readonly >
+                        </div>
+                    
+                        <!--form number 2-->
+                        <div class="form-holder">
+                            <label for="NAME">NAME</label>
+                            <input class="name" type="text" autofocus>
+                        </div>
+                        <!--form number 3-->
+                        <div class="form-holder">
+                            <label for="category">CATEGORY</label>
+                            <!-- <input class="category-btn" value="Select Category" type="button"> -->
+                            <div class="dropdown">
+                                    <div class="dropdown-select">
+                                        <span class="select">Select Categories</span>
+                                        <i class="fa fa-caret-down icon"></i>
+                                    </div>
+
+                                    <div class="dropdown-list">
+                                        <li class="dropdown-list_item" onclick="dropDownListItem(this)"> <a href="#"> Lazy-Code </a> </li>
+                                        <li class="dropdown-list_item" onclick="dropDownListItem(this)"> <a href="#"> Temi </a> </li> 
+                                        <li class="dropdown-list_item" onclick="dropDownListItem(this)"> <a href="#"> Danstom </a> </li>
+                                        <li class="dropdown-list_item" onclick="dropDownListItem(this)"> <a href="#"> J.J Rock </a> </li>
+                                        <li class="dropdown-list_item" onclick="dropDownListItem(this)"> <a href="#"> Bill Tech </a> </li>
+                                        <li class="dropdown-list_item" onclick="dropDownListItem(this)"> <a href="#"> P Star </a> </li>
+                                    </div>
+                                    <span class="search-menu_holder"> <input onkeyup="searchCategories()" id="sbycat" style="width: 100%;" type="search"> </span>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <!--LEFT FORM PANEL-->
+                    <div class="left-form">
+                        <div class="form-holder">
+                            <label for="NAME">QUANTITY</label>
+                            <input class="quantity" type="number">
+                        </div>
+
+                        <div class="form-holder">
+                            <label for="PRICE">PRICE</label>
+                            <span  class="currencySymbol">&#8358</span> 
+                            <input class="price" type="number" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parent-div-for-buttons">
+                    <div class="left-btn-contain">
+                        <button class="add-btn active-btn">Add</button>
+                        <button class="edit-btn active-btn">Edit</button>                    </div>
+
+                    <div class="right-btn-contain">
+                        <button  class="active-btn clear-btn">Clear</button>
+                        <button  class="active-btn delete-btn">Delete</button>
+                    </div>
+                </div>
+
+                <h2>Product List</h2>
+                <div class="parent-table-holder">
+                    <div class="header-table-holder">
+
+                        <p class="header-text">PROD ID</p>
+
+                        <span class="line"></span>
+
+                        <p class="header-text">PROD NAME</p>
+
+                        <span class="line"></span>
+
+                        <p class="header-text">PROD QUANTITY</p>
+
+                        <span class="line"></span>
+
+                        <p class="header-text">PROD PRICE</p>
+                        
+                        <span class="line"></span>
+
+                        <p class="header-text">PROD CATEGORY</p>
+                        
+                    </div>
+
+                    <div class="parent-for-table">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="div">
+                <p class="mess-text">MESSAGE</p>
+                <span class="close">&times;</span>
+            </div>
+            
+            <div class="main-holder">
+                <p class="_mb3">Are you sure you want to log out of sellers dashboard? </p>
+                <button id="selectors" class="yesbtn">Yes</button>
+                <button id="selectors" class="nobtn">No</button>
+            </div>
+        </div>
+    
+    </div>
+    <!---end of modal -->
+
+
+    <!-- loader  -->
+    <div class="loader_b">
+        <div class="loader"><img src="./images/loader.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+
+</section>
+
+<script src="./vanilla/vanilla_3.js"></script>
+<script src="./vanilla/modal.js"></script>
+<script src="./vanilla/_categories.js"></script>
+</body>
+</html>

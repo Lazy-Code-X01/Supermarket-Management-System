@@ -1,0 +1,22 @@
+@import './admin-color';
+
+
+/*scroll bar styling*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border-left: 1px solid;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: darken($color: $main-bg-color, $amount: 5);
+    transition: .3s ease;
+    border-radius: 2px;
+    
+    &:hover{
+        background-color: darken($color: $main-bg-color, $amount: 7);
+    }
+}
